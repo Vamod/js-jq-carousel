@@ -10,6 +10,23 @@ $(document).ready(function(){
         nextImage();
     });
 
+    //seleziono img specifica
+
+    $('.nav i').click(
+        function(){
+        //prendo la posizione esatta del pallino cliccato
+        var posizione = $(this).index();
+        console.log(posizione);
+        //tolgo prima la classe active
+        $('.images img').removeClass('active');
+        //eq prende l'indice e l'associa all'img
+        $('.images img').eq(posizione).addClass('active');
+        //rimuovere la classe active al pallino
+        $('.nav i').removeClass('active');
+        //dare la classe al pallino selezionato
+        $('.nav i').eq(posizione).addClass('active');
+    });
+
 
     //funzioni
 
@@ -50,5 +67,6 @@ $(document).ready(function(){
         cerchioAttivo.next().addClass('active');
         }
     }
+
 
 });
