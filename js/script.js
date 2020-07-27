@@ -54,7 +54,7 @@ $(document).ready(function(){
         var activeImage = $('.images img.active');
 
         var cerchioAttivo = $('.nav i.active');
-        //devo togliere la classe dall'oggetto
+        //devo togliere la classe dall'oggetto che ha la classe active
         activeImage.removeClass('active');
         cerchioAttivo.removeClass('active');
 
@@ -62,7 +62,7 @@ $(document).ready(function(){
             $('.images img.first').addClass('active');
             $('.nav i.first').addClass('active');
         } else {
-        // aggiungo la classe active alla prossima image
+        // aggiungo la classe active alla img successiva
         activeImage.next().addClass('active');
         cerchioAttivo.next().addClass('active');
         }
